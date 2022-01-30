@@ -22,7 +22,7 @@ describe('request api/calculate/add', function() {
 
 describe('request api/calculate/sub', function() {
   it('should return 10 when n1 is 20 and n2 is 10', function() {   
-    chai.request('http://localhost:3000')
+    chai.request(server)
     .post('/api/calculate/sub')
     .send({
       n1 : 20,
@@ -37,7 +37,7 @@ describe('request api/calculate/sub', function() {
 
 describe('request api/calculate/multi', function() {
   it('should return 10 when n1 is 5 and n2 is 2', function() {   
-    chai.request('http://localhost:3000')
+    chai.request(server)
     .post('/api/calculate/multi')
     .send({
       n1 : 5,
@@ -52,7 +52,7 @@ describe('request api/calculate/multi', function() {
 
 describe('request api/calculate/div', function() {
   it('should return 10 when n1 is 50 and n2 is 5', function() {   
-    chai.request('http://localhost:3000')
+    chai.request(server)
     .post('/api/calculate/div')
     .send({
       n1 : 50,
