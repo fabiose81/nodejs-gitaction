@@ -4,13 +4,18 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x, 16.x]
+
     steps:
       - run: echo "starting build from ${{ github.repository }}"
       - uses: actions/checkout@v2
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '16.x'
+          node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: npm ci
       - run: npm test
