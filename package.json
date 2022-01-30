@@ -1,0 +1,21 @@
+{
+  "name": "nodejs_gitaction",
+  "version": "1.0.0",
+  "description": "Node.js on GitAction",
+  "author": "Fabio Estrela",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha test/service/*.js test/controller/*.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1",
+    "superagent": "^7.1.1"
+  },
+  "devDependencies": {
+    "body-parser": "^1.19.1",
+    "chai": "^4.3.6",
+    "chai-http": "^4.3.0",
+    "mocha": "^9.2.0"
+  }
+}
