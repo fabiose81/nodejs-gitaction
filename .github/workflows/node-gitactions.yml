@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Use Nodejs
         uses: actions/setup-node@v1
         with:
           node-version: '16.x'
@@ -16,6 +17,7 @@ jobs:
 
   docker_hub: 
     name: Push Docker image to Docker Hub
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Check out the repo
