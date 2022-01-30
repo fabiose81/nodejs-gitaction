@@ -1,5 +1,5 @@
 var assert = require('assert');
-const calculate = require('../../service/calculate');
+let calculate = require('../../service/calculate');
 
 describe('function add(n1, n2)', function() {
     it('should return 5 when n1 is 2 and n2 is 3', function() {

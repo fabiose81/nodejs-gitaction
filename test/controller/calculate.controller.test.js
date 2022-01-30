@@ -1,3 +1,4 @@
+var server = require('../../server')
 var chai = require('chai'),
 chaiHttp = require('chai-http'),
 expect = chai.expect;
@@ -6,7 +7,7 @@ chai.use(chaiHttp);
 
 describe('request api/calculate/add', function() {
   it('should return 10 when n1 is 5 and n2 is 5', function() {   
-    chai.request('http://localhost:3000')
+    chai.request(server)
     .post('/api/calculate/add')
     .send({
       n1 : 5,
