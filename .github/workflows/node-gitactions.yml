@@ -1,0 +1,8 @@
+name: NodeJS / GitHub Actions
+on: [push]
+
+jobs:
+  init:
+    runs-on:
+    steps:
+      - run: echo "starting from ${{ github.repository }}"
