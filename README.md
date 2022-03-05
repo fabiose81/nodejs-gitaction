@@ -6,6 +6,7 @@
 
 # comands
 
+"npm install" to download dependencies
 "npm test" to run tests
 "npm start" to run application
 
